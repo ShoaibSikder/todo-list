@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container" id="header-container">
+            <h1>My To Do List</h1>
+            <img src="image.png" alt="logo" width="500px">
+        </div>
+    </header>
+
+    <section class="todo-list" id="todo-list">
+        <label for="task">Add task: </label>
+        <input type="text" name="task" id="task" placeholder="Enter a new task">
+        <button id="add-task">Add Task</button>
+        <ul id="task-list"></ul>
+    </section>
+
+    <script>
+        const taskInput = document.getElementById("task");
+        const taskBtn = document.getElementById("add-task");
+        const taskList = document.getElementById("task-list");
+
+        taskBtn.addEventListener("click", function () {
+            let taskText = taskInput.value.trim();
+            if (taskText === "") {
+                return;
+            }
+            let ListItem = document.createElement("li");
+            ListItem.innerText = taskText;
+            taskList.appendChild(ListItem);
+            taskInput.value = "";
+        })
+    </script>
+</body>
+
+</html>
