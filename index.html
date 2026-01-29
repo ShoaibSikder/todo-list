@@ -16,6 +16,27 @@
         </div>
     </header>
 
+    <section class="registration" id="registration">
+        <h2>Register</h2>
+        <form action="register.php" method="POST" class="register-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#login">Login here</a></p>
+    </section>
+
+    <section class="login" id="login">
+        <h2>Login</h2>
+        <form action="login.php" method="POST" class="login-form">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#registration">Register here</a></p>
+    </section>
+
     <section class="todo-list" id="todo-list">
         <label for="task">Add task: </label>
         <input type="text" name="task" id="task" placeholder="Enter a new task">
